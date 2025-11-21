@@ -184,7 +184,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const y = (row[yCol] - yMin) / yRange * scale - scale / 2;
                 const z = (row[zCol] - zMin) / zRange * scale - scale / 2;
                 
-                const geometry = new THREE.SphereGeometry(0.15, 12, 12);
+                const baseRadius = 0.001; // base size for a few points
+                const minRadius = 0.001; // minimum radius to keep visibility
+                const radius = Math.max(minRadius, baseRadius / Math.sqrt(data.length));
+                const geometry = new THREE.SphereGeometry(radius, 12, 12);
+
                 const hue = index / data.length;
                 const color = new THREE.Color().setHSL(hue, 0.7, 0.5);
                 const material = new THREE.MeshLambertMaterial({ 
