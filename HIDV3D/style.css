@@ -186,6 +186,37 @@ button.danger {
     border-bottom: none;
 }
 
+#handControlPanel {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f8f9fa;
+}
+
+#handControlPanel video {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+#handStatus {
+  color: #007bff;
+  font-size: 16px;
+}
+
+#handControlBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#handControlBtn:hover {
+  background-color: #0056b3;
+}
+
+
 @media (max-width: 768px) {
     header {
         padding: 1rem;
@@ -203,3 +234,5 @@ button.danger {
         height: 400px;
     }
 }
+
+

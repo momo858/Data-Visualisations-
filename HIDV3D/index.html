@@ -18,6 +18,12 @@
                 <button id="uploadBtn">📁 Upload CSV</button>
                 <button id="visualizeBtn" disabled>🎨 Visualize Data</button>
                 <button id="resetBtn" disabled>🔄 Reset View</button>
+                <button id="handControlBtn">🖐️ Hand Control</button>
+            </div>
+
+            <div id="handControlPanel" style="display:none;">
+                <video id="webcam" autoplay playsinline width="300" height="230" style="border:1px solid #333"></video>
+                <div id="handStatus">Hand status...</div>
             </div>
 
             <input id="csvInput" type="file" accept=".csv" style="display:none;">
@@ -64,11 +70,17 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
+
+
     <!-- Your JavaScript Files - CORRECT PATHS -->
     <script src="scripts/DataMapper.js"></script>
     <script src="scripts/CSV3DViewer.js"></script>
     <script src="scripts/ColumnDetector.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/HandTrack.js"></script>
+
 
 </body>
 </html>
