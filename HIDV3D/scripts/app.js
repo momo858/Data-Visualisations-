@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let parsedCsvData = null;
   let columnDetector = null;
   const viewer = new CSV3DViewer("view3d");
-  window.viewer = viewer;
+  window.viewer = viewer; // Add this line
 
   const uploadBtn = document.getElementById("uploadBtn");
   const csvInput = document.getElementById("csvInput");

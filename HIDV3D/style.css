@@ -217,6 +217,16 @@ button.danger {
 }
 
 
+#handGesturePanel {
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background: #f6fafe;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.09);
+  margin-bottom: 18px;
+}
+
+#webcam, #gestureCanvas { transform: scaleX(-1); }
+
 @media (max-width: 768px) {
     header {
         padding: 1rem;

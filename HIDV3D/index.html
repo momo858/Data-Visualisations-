@@ -21,10 +21,19 @@
                 <button id="handControlBtn">🖐️ Hand Control</button>
             </div>
 
-            <div id="handControlPanel" style="display:none;">
-                <video id="webcam" autoplay playsinline width="300" height="230" style="border:1px solid #333"></video>
-                <div id="handStatus">Hand status...</div>
+            <div id="handGesturePanel" style="display:none; position:relative; width:320px; height:240px; margin-top:1rem;">
+            <!-- Loading spinner (optional, shown only during model load) -->
+            <div id="handLoading" style="display:none; position:absolute; top:5px; left:5px; z-index:10; background:#fffcee; color:#007bff; padding:5px 10px; border-radius:6px;">
+                Loading handpose model…
             </div>
+            <!-- Webcam video stream (visible) -->
+            <video id="webcam" autoplay playsinline width="320" height="240" style="position:absolute; left:0; top:0; background:#222; border-radius:10px; border:1px solid #007bff; z-index:1;"></video>
+            <!-- Canvas to draw hand landmarks over the webcam -->
+            <canvas id="gestureCanvas" width="320" height="240" style="position:absolute; left:0; top:0; pointer-events:none; z-index:2;"></canvas>
+            <!-- Gesture status (emoji/text) -->
+            <div id="gestureStatus" style="position:absolute; bottom:12px; right:25px; font-size:2.5rem; z-index:3;"></div>
+            </div>
+
 
             <input id="csvInput" type="file" accept=".csv" style="display:none;">
 
@@ -65,13 +74,20 @@
         </div>
     </main>
 
+
+
+    <!-- Tensorflow.js and Handpose/fingerpose: -->
+    <script src="https://unpkg.com/@tensorflow/tfjs-core@3.7.0/dist/tf-core.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-converter@3.7.0/dist/tf-converter.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@3.7.0/dist/tf-backend-webgl.js"></script>
+    <script src="https://unpkg.com/@tensorflow-models/handpose@0.0.7/dist/handpose.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fingerpose@0.1.0/dist/fingerpose.min.js"></script>
+
+
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
 
 
     <!-- Your JavaScript Files - CORRECT PATHS -->
