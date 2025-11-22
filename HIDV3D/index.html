@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HIDV3D — Barebones</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -15,8 +15,8 @@
     <main>
         <div class="controls">
             <div class="button-group">
-                <button id="uploadBtn"> Upload CSV</button>
-                <button id="visualizeBtn" disabled> Visualize Data</button>
+                <button id="uploadBtn">📁 Upload CSV</button>
+                <button id="visualizeBtn" disabled>🎨 Visualize Data</button>
                 <button id="resetBtn" disabled>🔄 Reset View</button>
             </div>
 
@@ -59,9 +59,16 @@
         </div>
     </main>
 
+    <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+
+    <!-- Your JavaScript Files - CORRECT PATHS -->
+    <script src="scripts/DataMapper.js"></script>
+    <script src="scripts/CSV3DViewer.js"></script>
+    <script src="scripts/ColumnDetector.js"></script>
+    <script src="scripts/app.js"></script>
 
 </body>
 </html>
