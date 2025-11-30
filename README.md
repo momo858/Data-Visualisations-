@@ -14,7 +14,7 @@ HIDV3D is a web-based 3D data visualiser that lets you upload a CSV file and exp
 - Backend: Node.js. 
 - Database: PostgreSQL for user data, CSV metadata, and saved views. 
 
-## Project vibe
+## Project
 
 This project is built for presenters, educators, and Students who want to *feel* their data in 3D space instead of staring at flat charts, bringing a cinematic, gesture-driven experience into a normal web browser. 
 
