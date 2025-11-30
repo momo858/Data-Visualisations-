@@ -15,22 +15,25 @@
     <main>
         <div class="controls">
             <div class="button-group">
-                <button id="uploadBtn">📁 Upload CSV</button>
-                <button id="visualizeBtn" disabled>🎨 Visualize Data</button>
-                <button id="resetBtn" disabled>🔄 Reset View</button>
-                <button id="handControlBtn">🖐️ Hand Control</button>
+                <button id="uploadBtn"> Upload CSV</button>
+                <button id="visualizeBtn" disabled> Visualize Data</button>
+                <button id="resetBtn" disabled> Reset View</button>
+                <button id="handControlBtn"> Hand Control</button>
             </div>
 
             <div id="handGesturePanel" style="display:none; position:relative; width:320px; height:240px; margin-top:1rem;">
-            <!-- Loading spinner (optional, shown only during model load) -->
+
             <div id="handLoading" style="display:none; position:absolute; top:5px; left:5px; z-index:10; background:#fffcee; color:#007bff; padding:5px 10px; border-radius:6px;">
                 Loading handpose model…
             </div>
-            <!-- Webcam video stream (visible) -->
+
+            <!-- Webcam video stream  -->
             <video id="webcam" autoplay playsinline width="320" height="240" style="position:absolute; left:0; top:0; background:#222; border-radius:10px; border:1px solid #007bff; z-index:1;"></video>
+            
             <!-- Canvas to draw hand landmarks over the webcam -->
             <canvas id="gestureCanvas" width="320" height="240" style="position:absolute; left:0; top:0; pointer-events:none; z-index:2;"></canvas>
-            <!-- Gesture status (emoji/text) -->
+           
+            <!-- Gesture status -->
             <div id="gestureStatus" style="position:absolute; bottom:12px; right:25px; font-size:2.5rem; z-index:3;"></div>
             </div>
 
@@ -90,7 +93,7 @@
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
 
 
-    <!-- Your JavaScript Files - CORRECT PATHS -->
+    <!-- JavaScript Files - -->
     <script src="scripts/DataMapper.js"></script>
     <script src="scripts/CSV3DViewer.js"></script>
     <script src="scripts/ColumnDetector.js"></script>

@@ -18,7 +18,7 @@ function createHandOpenGesture() {
     return handOpen;
 }
 
-// Closed hand (fist): All fingers curled
+// Closed hand : All fingers curled
 function createHandClosedGesture() {
     const fp = window.fp;
     const handClosed = new fp.GestureDescription('hand_closed');
